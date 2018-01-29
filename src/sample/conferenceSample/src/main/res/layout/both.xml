@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <ScrollView
+        android:layout_width="140dip"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="140dip"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/llLocalView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="90dip"
+                android:orientation="horizontal"
+                android:background="#000000"
+                android:gravity="center"
+                android:layout_margin="2dp">
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/roomId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:hint="@string/roomId"/>
+
+            <Button
+                android:id="@+id/btConnect"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:enabled="true"
+                android:onClick="onClick"
+                android:text="@string/connect" />
+
+            <Button
+                android:id="@+id/btStartStopCall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:onClick="onClick"
+                android:enabled="false"
+                android:text="@string/publish" />
+
+            <Button
+                android:id="@+id/btSwitchCamera"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:onClick="onClick"
+                android:enabled="false"
+                android:text="Switch Camera" />
+
+            <Button
+                android:id="@+id/btShareScreen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:onClick="onClick"
+                android:enabled="false"
+                android:text="@string/startShareScreen"/>
+
+            <ZoomControls
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/zoomControls"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llRemoteView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:background="#000000"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/star"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:gravity="center" >
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:id="@+id/ratingBar"
+                    android:isIndicator="true"/>
+
+                <Button
+                    android:id="@+id/btShowStats"
+                    android:layout_width="wrap_content"
+                    android:paddingRight="4dp"
+                    android:paddingLeft="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="bottom"
+                    android:onClick="onClick"
+                    android:enabled="true"
+                    android:background="@drawable/button"
+                    android:text="Detail"
+                    android:textColor="@color/half_transparent"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/stats"
+                android:gravity="center"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                android:text="no Connection"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

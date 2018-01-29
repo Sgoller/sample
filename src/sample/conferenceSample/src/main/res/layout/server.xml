@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chooseServer"
+        android:layout_weight="0.09"
+        android:gravity="bottom"/>
+
+    <EditText
+        android:id="@+id/basicServerEdTx"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:hint="@string/basicServer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/externalServer"
+        android:layout_weight="0.20"
+        android:gravity="bottom"/>
+
+    <EditText
+        android:id="@+id/externalServerEdTx"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:hint="@string/externalServer" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:text="Start"
+        android:id="@+id/externalSeverBtn"
+        android:enabled="false"
+        android:onClick="onClick"/>
+
+</LinearLayout>
